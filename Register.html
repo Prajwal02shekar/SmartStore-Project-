@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Register</legend>
+            <label for="un">Username:</label>
+            <input type="text" placeholder="Enter Username:" id="un" name="username">
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Enter Email" id="email" name="Email">
+            <br><br>
+            <label for="pwd">Password:</label>
+            <input type="password" placeholder="Enter Password" id="pwd" name="password">
+            <br><br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" placeholder="Enter Phone Number" id="phone" name="phone" maxlength="10" minlength="10">
+            <br><br>
+            <label for="age">Age:</label>
+            <input type="number" placeholder="Enter Age" id="age" name="age">
+            <br><br>
+            <label for="dob">Date Of Birth:</label>
+            <input type="date" placeholder="Enter DOB" id="dob" name="dob">
+            <br><br>
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" id="gender" value="male">Male
+            <input type="radio" name="gender" value="Female">Female
+            <input type="radio" name="gender" value="Others">Others
+            <br><br>
+            <label for="imageURL">Enter Image URL</label>
+            <input type="url" id="imageURL" placeholder="Enter Image URL" name="imageURL">
+            <br><br>
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+
+
+        </fieldset>
+    </form>
+</body>
+<script src="./script/register.js"></script>
+
+</html>
