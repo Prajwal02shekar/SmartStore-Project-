@@ -456,10 +456,10 @@ let productsData = [
 console.log(productsData)
 
 
-function displayProducts() {
+function displayProducts(data) {
     let item = document.getElementById('product-lists')
     console.log(item);
-    item.innerHTML = productsData.map((product) => `
+    item.innerHTML = data.map((product) => `
                 <div class="product-card">
                 <img src=${product.image} height="100px" width="100px" alt="">
                 <h3>${product.name}</h3>
@@ -468,7 +468,7 @@ function displayProducts() {
             </div>
         `).join("")
 }
-displayProducts()
+displayProducts(productsData)
 
 
 
@@ -498,10 +498,19 @@ function updateCartCount() {
 updateCartCount()
 
 
-let userImage=document.getElementById('userImage')
-console.log(userImage)
-let data=JSON.parse(localStorage.getItem('userData'))
-console.log(data)
-if(data){
-    userImage.src=data.imageURL;
+let searchInput = document.getElementById('searchInput')
+console.log(searchInput)
+searchInput.oninput = () => {
+    let value = searchInput.value.toLowerCase();
+    console.log(value)
+    let filterProducts = productsData.filter(p => p.name.toLowerCase().includes(value))
+    displayProducts(filterProducts)
+}
+
+let personImage=document.getElementById('personImage')
+console.log(personImage)
+let imageData=JSON.parse(localStorage.getItem('userData'))
+console.log(imageData)
+if(imageData){
+    personImage.src=imageData.imageURL
 }
