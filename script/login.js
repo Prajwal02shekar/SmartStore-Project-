@@ -13,7 +13,7 @@ myForm.onsubmit=(e)=>{
     let storedData=JSON.parse(localStorage.getItem('userData'))
     console.log(storedData)
 
-    if(email===storedData.Email && password ===storedData.password){
+    if(email===storedData.email && password ===storedData.password){
         alert("Login Successfull")
         window.location.href='./HomePage.html'
     }else{
